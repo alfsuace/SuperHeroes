@@ -4,11 +4,11 @@ data class SuperHero(
     val id: Int,
     val name: String,
     val image: List<String>
-){
-    fun getImageXs() : String = image[0]
-    fun getImageSm() : String = image[1]
-    fun getImageMd() : String = image[2]
-    fun getImageLg() : String = image[3]
+) {
+    fun getImageXs(): String = image[0]
+    fun getImageSm(): String = image[1]
+    fun getImageMd(): String = image[2]
+    fun getImageLg(): String = image[3]
 }
 
 data class Biography(
@@ -18,17 +18,15 @@ data class Biography(
 data class Work(
     val occupation: String
 )
+data class Connections(
+    val affiliation: String
+)
 
 data class PowerStats(
     val intelligence: Int,
     val speed: Int,
     val combat: Int
 )
-
-data class Connections(
-    val affiliation: String
-)
-
 data class SuperHeroDetail(
     val id: Int,
     val name: String,

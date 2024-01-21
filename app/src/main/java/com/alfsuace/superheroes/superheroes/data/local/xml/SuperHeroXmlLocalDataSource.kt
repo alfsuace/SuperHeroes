@@ -11,9 +11,9 @@ import com.alfsuace.superheroes.superheroes.data.local.SuperHeroLocalDataReposit
 import com.alfsuace.superheroes.superheroes.domain.SuperHero
 
 class SuperHeroXmlLocalDataSource(
-    private val context: Context,
-    private val serializer: Serializer
-) : SuperHeroLocalDataRepository{
+    private var context: Context,
+    private var serializer: Serializer
+) : SuperHeroLocalDataRepository {
 
     private val sharedPref = context.getSharedPreferences("SuperHeroes", Context.MODE_PRIVATE)
 

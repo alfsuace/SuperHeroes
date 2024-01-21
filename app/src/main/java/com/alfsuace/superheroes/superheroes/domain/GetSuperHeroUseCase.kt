@@ -8,7 +8,7 @@ class GetSuperHeroUseCase(
     private val biographyRepository: BiographyRepository,
     private val powerStatsRepository: PowerStatsRepository,
     private val connectionsRepository: ConnectionsRepository
-){
+) {
     suspend operator fun invoke(id: Int): Either<ErrorApp, SuperHeroDetail> {
         val superHero = superHeroRepository.getSuperHeroId(id)
 
@@ -29,6 +29,6 @@ class GetSuperHeroUseCase(
                 powerStats.combat
             )
         }
-        return  detail
+        return detail
     }
 }

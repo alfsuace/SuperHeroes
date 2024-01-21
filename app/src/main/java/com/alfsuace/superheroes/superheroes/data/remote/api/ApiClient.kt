@@ -31,7 +31,7 @@ class ApiClient {
     suspend fun getSuperHeroes(): Either<ErrorApp, List<SuperHeroApiModel>> {
         val response = apiEndPoint.getSuperHeroes()
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()
@@ -41,7 +41,7 @@ class ApiClient {
     suspend fun getSuperHeroeId(id: Int): Either<ErrorApp, SuperHeroApiModel> {
         val response = apiEndPoint.getSuperHeroId(id)
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()
@@ -51,7 +51,7 @@ class ApiClient {
     suspend fun getBiography(id: Int): Either<ErrorApp, BiographyApiModel> {
         val response = apiEndPoint.getBiography(id)
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()
@@ -61,7 +61,7 @@ class ApiClient {
     suspend fun getWork(id: Int): Either<ErrorApp, WorkApiModel> {
         val response = apiEndPoint.getWork(id)
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()
@@ -71,7 +71,7 @@ class ApiClient {
     suspend fun getPowerStats(id: Int): Either<ErrorApp, PowerStatsApiModel> {
         val response = apiEndPoint.getPowerStats(id)
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()
@@ -81,7 +81,7 @@ class ApiClient {
     suspend fun getConnections(id: Int): Either<ErrorApp, ConnectionsApiModel> {
         val response = apiEndPoint.getConnections(id)
 
-        return if (response.isSuccessful){
+        return if (response.isSuccessful) {
             response.body()!!.right()
         } else {
             ErrorApp.UnknownError.left()

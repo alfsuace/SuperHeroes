@@ -2,6 +2,7 @@ package com.alfsuace.superheroes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.superheroes23_24.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
